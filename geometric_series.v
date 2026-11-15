@@ -7,8 +7,8 @@ initial
 		series=starting_term;
 		for(i=0;i<6;i=i+1)
 			begin 
-				series=series*3;
 				$write("%d,",series);
+				series=series*3;
 			end
 	end
 endmodule	
