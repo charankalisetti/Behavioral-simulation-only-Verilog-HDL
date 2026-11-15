@@ -1,0 +1,16 @@
+module collatz_sequence;
+integer num=6;
+
+initial 
+	begin
+		while(num!=1)
+			begin
+				$display("%d,",num);
+				if(num%2==0)
+					num=num/2;
+					else 
+						num=(3*num)+1;
+			end
+		$display("%d",num);
+	end
+endmodule	
