@@ -1,0 +1,20 @@
+module check_cube;
+integer flag,num=27;
+
+initial
+	begin:block
+		integer i;
+		for(i=1;i*i*i<=num;i=i+1)
+			begin	
+				if(i*i*i==num)
+					flag=1;
+					else
+						flag=0;
+			end
+		if(flag)
+			$display("%d is a perfect cube",num);
+			else
+				$display("%d is a not perfect cube",num);
+	end
+endmodule	
+		

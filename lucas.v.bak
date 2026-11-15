@@ -1,0 +1,22 @@
+module lucas;
+integer a,b,next;
+
+initial
+	begin:block
+		integer i;
+		a=2;
+		b=1;
+		for(i=1;i<=10;i=i+1)
+			begin
+				next=a+b;
+				a=b;
+				b=next;
+				$write("%0d",next);
+				if(i<9)
+					$write(",");
+			end
+	end
+endmodule
+	
+				
+		
