@@ -6,7 +6,7 @@ A collection of standalone behavioral Verilog examples for mathematical sequence
 
 ## Repository layout
 
-- sequences/ — progression and recurrence examples.
+- sequences/ — progression, recurrence, and polygonal-number examples. Add new sequence files here using descriptive lowercase snake_case names.
 - number_checks/ — perfect-square and perfect-cube checks.
 - factorials/ — factorial and superfactorial examples.
 
@@ -17,12 +17,15 @@ A collection of standalone behavioral Verilog examples for mathematical sequence
 | File | Sequence / algorithm |
 |---|---|
 | sequences/arithmetic_progression.v | Arithmetic progression |
+| sequences/bell_triangle.v | Bell numbers generated with the Bell Triangle |
 | sequences/collatz_sequence.v | Collatz sequence |
 | sequences/fibonacci.v | Fibonacci sequence |
 | sequences/geometric_series.v | Geometric series |
+| sequences/heptagonal_numbers.v | Heptagonal numbers |
 | sequences/juggler_sequence.v | Juggler sequence |
 | sequences/lucas.v | Lucas sequence |
 | sequences/padovan.v | Padovan sequence |
+| sequences/polygonal_numbers.v | Triangular, square, pentagonal, hexagonal, and heptagonal numbers |
 | sequences/triangular.v | Triangular numbers |
 | sequences/tribonacci.v | Tribonacci sequence |
 
@@ -42,14 +45,13 @@ A collection of standalone behavioral Verilog examples for mathematical sequence
 
 ## Run a simulation
 
-From the repository root, compile and run an individual source file with Icarus Verilog:
+From the repository root, compile and run the polygonal-number example with Icarus Verilog:
 
-    iverilog -o fibonacci.vvp sequences/fibonacci.v
-    vvp fibonacci.vvp
+    iverilog -o polygonal_numbers.vvp sequences/polygonal_numbers.v
+    vvp polygonal_numbers.vvp
 
 The same source files can be opened in EDA Playground, QuestaSim, ModelSim, or Vivado Simulator.
 
 ## Topics
 
 verilog, verilog-hdl, behavioral-verilog, simulation, vlsi, digital-design, number-theory, algorithms, hdl
-
