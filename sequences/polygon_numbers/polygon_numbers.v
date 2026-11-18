@@ -1,11 +1,11 @@
 // ============================================================================
-// Module Name: polygonal_numbers
+// Module Name: polygon_numbers
 // Description: Prints the first 10 triangular, square, pentagonal, hexagonal,
 //              and heptagonal numbers.
 // Starting index: n = 1 (the first positive term of each sequence)
 // ============================================================================
 
-module polygonal_numbers;
+module polygon_numbers;
 
     integer n;
     integer triangular, square, pentagonal, hexagonal, heptagonal;

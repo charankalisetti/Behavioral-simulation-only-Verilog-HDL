@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <style>
+    .conn { stroke: #dcdcdc; stroke-width: 1.5; fill: none; }
+    .node-circle { stroke: #b0b0b0; stroke-width: 1.2; }
+    .num-text { font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: bold; text-anchor: middle; dominant-baseline: central; fill: #000000; }
+    .highlight-text { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: bold; text-anchor: middle; dominant-baseline: central; fill: #ffff00; stroke: #000000; stroke-width: 1.1px; paint-order: stroke; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <!-- Connecting Layer Lines -->
+  <polyline class="conn" points="
+    300,45 352,75 352,135 300,165 248,135 248,75
+    196,105 196,165 196,225 248,255 300,285 352,255 404,225 404,165 404,105
+    456,135 456,195 456,255 456,315 404,345 352,375 300,405 248,375 196,345 144,315 144,255 144,195 144,135
+    92,165 92,225 92,285 92,345 92,405 144,435 196,465 248,495 300,525 352,495 404,465 456,435 508,405 508,345 508,285 508,225 508,165
+  " />
+
+  <!-- Layer 1: H1 = 1 -->
+  <g transform="translate(300, 45)">
+    <circle class="node-circle" r="21" fill="#f6d5d5" />
+    <text class="highlight-text">1</text>
+  </g>
+
+  <!-- Layer 2: H2 = 6 -->
+  <g transform="translate(352, 75)">
+    <circle class="node-circle" r="21" fill="#f7d5e5" />
+    <text class="num-text">2</text>
+  </g>
+  <g transform="translate(352, 135)">
+    <circle class="node-circle" r="21" fill="#f7d5e5" />
+    <text class="num-text">3</text>
+  </g>
+  <g transform="translate(300, 165)">
+    <circle class="node-circle" r="21" fill="#f7d5e5" />
+    <text class="num-text">4</text>
+  </g>
+  <g transform="translate(248, 135)">
+    <circle class="node-circle" r="21" fill="#f7d5e5" />
+    <text class="num-text">5</text>
+  </g>
+  <g transform="translate(248, 75)">
+    <circle class="node-circle" r="21" fill="#f7d5e5" />
+    <text class="highlight-text">6</text>
+  </g>
+
+  <!-- Layer 3: H3 = 15 -->
+  <g transform="translate(196, 105)">
+    <circle class="node-circle" r="21" fill="#f3d2f7" />
+    <text class="num-text">7</text>
+  </g>
+  <g transform="translate(196, 165)">
+    <circle class="node-circle" r="21" fill="#f3d2f7" />
+    <text class="num-text">8</text>
+  </g>
+  <g transform="translate(196, 225)">
+    <circle class="node-circle" r="21" fill="#f3d2f7" />
+    <text class="num-text">9</text>
+  </g>
+  <g transform="translate(248, 255)">
+    <circle class="node-circle" r="21" fill="#f3d2f7" />
+    <text class="num-text">10</text>
+  </g>
+  <g transform="translate(300, 285)">
+    <circle class="node-circle" r="21" fill="#f3d2f7" />
+    <text class="num-text">11</text>
+  </g>
+  <g transform="translate(352, 255)">
+    <circle class="node-circle" r="21" fill="#f3d2f7" />
+    <text class="num-text">12</text>
+  </g>
+  <g transform="translate(404, 225)">
+    <circle class="node-circle" r="21" fill="#f3d2f7" />
+    <text class="num-text">13</text>
+  </g>
+  <g transform="translate(404, 165)">
+    <circle class="node-circle" r="21" fill="#f3d2f7" />
+    <text class="num-text">14</text>
+  </g>
+  <g transform="translate(404, 105)">
+    <circle class="node-circle" r="21" fill="#f3d2f7" />
+    <text class="highlight-text">15</text>
+  </g>
+
+  <!-- Layer 4: H4 = 28 -->
+  <g transform="translate(456, 135)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">16</text>
+  </g>
+  <g transform="translate(456, 195)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">17</text>
+  </g>
+  <g transform="translate(456, 255)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">18</text>
+  </g>
+  <g transform="translate(456, 315)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">19</text>
+  </g>
+  <g transform="translate(404, 345)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">20</text>
+  </g>
+  <g transform="translate(352, 375)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">21</text>
+  </g>
+  <g transform="translate(300, 405)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">22</text>
+  </g>
+  <g transform="translate(248, 375)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">23</text>
+  </g>
+  <g transform="translate(196, 345)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">24</text>
+  </g>
+  <g transform="translate(144, 315)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">25</text>
+  </g>
+  <g transform="translate(144, 255)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">26</text>
+  </g>
+  <g transform="translate(144, 195)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="num-text">27</text>
+  </g>
+  <g transform="translate(144, 135)">
+    <circle class="node-circle" r="21" fill="#e2d5f8" />
+    <text class="highlight-text">28</text>
+  </g>
+
+  <!-- Layer 5: H5 = 45 -->
+  <g transform="translate(92, 165)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">29</text>
+  </g>
+  <g transform="translate(92, 225)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">30</text>
+  </g>
+  <g transform="translate(92, 285)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">31</text>
+  </g>
+  <g transform="translate(92, 345)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">32</text>
+  </g>
+  <g transform="translate(92, 405)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">33</text>
+  </g>
+  <g transform="translate(144, 435)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">34</text>
+  </g>
+  <g transform="translate(196, 465)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">35</text>
+  </g>
+  <g transform="translate(248, 495)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">36</text>
+  </g>
+  <g transform="translate(300, 525)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">37</text>
+  </g>
+  <g transform="translate(352, 495)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">38</text>
+  </g>
+  <g transform="translate(404, 465)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">39</text>
+  </g>
+  <g transform="translate(456, 435)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">40</text>
+  </g>
+  <g transform="translate(508, 405)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">41</text>
+  </g>
+  <g transform="translate(508, 345)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">42</text>
+  </g>
+  <g transform="translate(508, 285)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">43</text>
+  </g>
+  <g transform="translate(508, 225)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="num-text">44</text>
+  </g>
+  <g transform="translate(508, 165)">
+    <circle class="node-circle" r="21" fill="#d3d7f9" />
+    <text class="highlight-text">45</text>
+  </g>
+</svg>

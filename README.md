@@ -6,7 +6,8 @@ A collection of standalone behavioral Verilog examples for mathematical sequence
 
 ## Repository layout
 
-- sequences/ — progression, recurrence, and polygonal-number examples. Add new sequence files here using descriptive lowercase snake_case names.
+- sequences/ — progression and recurrence examples. Add new sequence files here using descriptive lowercase snake_case names.
+- sequences/polygon_numbers/ — polygon-number Verilog modules and their SVG diagrams.
 - number_checks/ — perfect-square and perfect-cube checks.
 - factorials/ — factorial and superfactorial examples.
 
@@ -21,13 +22,18 @@ A collection of standalone behavioral Verilog examples for mathematical sequence
 | sequences/collatz_sequence.v | Collatz sequence |
 | sequences/fibonacci.v | Fibonacci sequence |
 | sequences/geometric_series.v | Geometric series |
-| sequences/heptagonal_numbers.v | Heptagonal numbers |
 | sequences/juggler_sequence.v | Juggler sequence |
 | sequences/lucas.v | Lucas sequence |
 | sequences/padovan.v | Padovan sequence |
-| sequences/polygonal_numbers.v | Triangular, square, pentagonal, hexagonal, and heptagonal numbers |
-| sequences/triangular.v | Triangular numbers |
 | sequences/tribonacci.v | Tribonacci sequence |
+
+### Polygon numbers
+
+| File | Sequence / algorithm |
+|---|---|
+| sequences/polygon_numbers/polygon_numbers.v | Prints triangular, square, pentagonal, hexagonal, and heptagonal numbers |
+| sequences/polygon_numbers/triangular.v | Standalone triangular-number example |
+| sequences/polygon_numbers/heptagonal_numbers.v | Standalone heptagonal-number example |
 
 ### Number checks
 
@@ -43,12 +49,24 @@ A collection of standalone behavioral Verilog examples for mathematical sequence
 | factorials/factorial.v | Factorial |
 | factorials/superfactorial.v | Superfactorial |
 
+## Polygon-number images
+
+The SVGs contain dot counts matching the fifth term of each sequence: 15 triangular, 25 square, 35 pentagonal, 45 hexagonal, and 55 heptagonal dots.
+
+| Image | Sequence |
+|---|---|
+| sequences/polygon_numbers/images/triangular_numbers.svg | Triangular |
+| sequences/polygon_numbers/images/square_numbers.svg | Square |
+| sequences/polygon_numbers/images/pentagonal_numbers.svg | Pentagonal |
+| sequences/polygon_numbers/images/hexagonal_numbers.svg | Hexagonal |
+| sequences/polygon_numbers/images/heptagonal_numbers.svg | Heptagonal |
+
 ## Run a simulation
 
-From the repository root, compile and run the polygonal-number example with Icarus Verilog:
+From the repository root, compile and run the combined polygon-number example with Icarus Verilog:
 
-    iverilog -o polygonal_numbers.vvp sequences/polygonal_numbers.v
-    vvp polygonal_numbers.vvp
+    iverilog -o polygon_numbers.vvp sequences/polygon_numbers/polygon_numbers.v
+    vvp polygon_numbers.vvp
 
 The same source files can be opened in EDA Playground, QuestaSim, ModelSim, or Vivado Simulator.
 

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <style>
+    .conn { stroke: #dcdcdc; stroke-width: 1.8; fill: none; }
+    .node-circle { stroke: #b0b0b0; stroke-width: 1.3; }
+    .num-text { font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: bold; text-anchor: middle; dominant-baseline: central; fill: #000000; }
+    .highlight-text { font-family: Arial, Helvetica, sans-serif; font-size: 23px; font-weight: bold; text-anchor: middle; dominant-baseline: central; fill: #ffff00; stroke: #000000; stroke-width: 1.2px; paint-order: stroke; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <!-- Connecting Layer Lines -->
+  <polyline class="conn" points="300,115 352,205 248,205 196,295 300,295 404,295 456,385 352,385 248,385 144,385 92,475 196,475 300,475 404,475 508,475" />
+
+  <!-- Layer 1: T1 = 1 -->
+  <g transform="translate(300, 115)">
+    <circle class="node-circle" r="24" fill="#f6d5d5" />
+    <text class="highlight-text">1</text>
+  </g>
+
+  <!-- Layer 2: T2 = 3 -->
+  <g transform="translate(352, 205)">
+    <circle class="node-circle" r="24" fill="#f7d5e5" />
+    <text class="num-text">2</text>
+  </g>
+  <g transform="translate(248, 205)">
+    <circle class="node-circle" r="24" fill="#f7d5e5" />
+    <text class="highlight-text">3</text>
+  </g>
+
+  <!-- Layer 3: T3 = 6 -->
+  <g transform="translate(196, 295)">
+    <circle class="node-circle" r="24" fill="#f3d2f7" />
+    <text class="num-text">4</text>
+  </g>
+  <g transform="translate(300, 295)">
+    <circle class="node-circle" r="24" fill="#f3d2f7" />
+    <text class="num-text">5</text>
+  </g>
+  <g transform="translate(404, 295)">
+    <circle class="node-circle" r="24" fill="#f3d2f7" />
+    <text class="highlight-text">6</text>
+  </g>
+
+  <!-- Layer 4: T4 = 10 -->
+  <g transform="translate(456, 385)">
+    <circle class="node-circle" r="24" fill="#e2d5f8" />
+    <text class="num-text">7</text>
+  </g>
+  <g transform="translate(352, 385)">
+    <circle class="node-circle" r="24" fill="#e2d5f8" />
+    <text class="num-text">8</text>
+  </g>
+  <g transform="translate(248, 385)">
+    <circle class="node-circle" r="24" fill="#e2d5f8" />
+    <text class="num-text">9</text>
+  </g>
+  <g transform="translate(144, 385)">
+    <circle class="node-circle" r="24" fill="#e2d5f8" />
+    <text class="highlight-text">10</text>
+  </g>
+
+  <!-- Layer 5: T5 = 15 -->
+  <g transform="translate(92, 475)">
+    <circle class="node-circle" r="24" fill="#d3d7f9" />
+    <text class="num-text">11</text>
+  </g>
+  <g transform="translate(196, 475)">
+    <circle class="node-circle" r="24" fill="#d3d7f9" />
+    <text class="num-text">12</text>
+  </g>
+  <g transform="translate(300, 475)">
+    <circle class="node-circle" r="24" fill="#d3d7f9" />
+    <text class="num-text">13</text>
+  </g>
+  <g transform="translate(404, 475)">
+    <circle class="node-circle" r="24" fill="#d3d7f9" />
+    <text class="num-text">14</text>
+  </g>
+  <g transform="translate(508, 475)">
+    <circle class="node-circle" r="24" fill="#d3d7f9" />
+    <text class="highlight-text">15</text>
+  </g>
+</svg>
