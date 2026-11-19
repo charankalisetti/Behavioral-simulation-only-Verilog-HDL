@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 540" width="700" height="540">
+  <style>
+    .title { font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: bold; fill: #1a237e; text-anchor: middle; }
+    .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold; fill: #37474f; text-anchor: middle; }
+    .seq-box { fill: #f1f8e9; stroke: #558b2f; stroke-width: 1.8; rx: 8; }
+    .seq-num { font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: bold; fill: #1b5e20; text-anchor: middle; dominant-baseline: central; }
+    .ptr-label { font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: bold; fill: #d84315; text-anchor: middle; }
+    .col-hdr { font-family: 'Courier New', Courier, monospace; font-size: 20px; font-weight: bold; fill: #0d47a1; text-anchor: middle; }
+    .eq-text { font-family: 'Courier New', Courier, monospace; font-size: 24px; font-weight: bold; fill: #212121; text-anchor: middle; dominant-baseline: central; }
+    .step-note { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #455a64; text-anchor: start; dominant-baseline: central; }
+    .shift-arrow { stroke: #e65100; stroke-width: 2.5; fill: none; }
+    .bracket { stroke: #d84315; stroke-width: 2; fill: none; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e65100" />
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="350" y="36" class="title">Tribonacci Sequence: Default Values &amp; Variable Shift</text>
+  <text x="350" y="62" class="subtitle">Default Seed Values: a = 0, b = 1, c = 1  |  Rule: d = a + b + c</text>
+
+  <!-- Top Sequence Strip (0, 1, 1, 2, 4, 7) -->
+  <g transform="translate(145, 85)">
+    <rect x="0" y="0" width="56" height="44" class="seq-box" style="fill:#fff3e0; stroke:#e65100;" />
+    <text x="28" y="22" class="seq-num" style="fill:#bf360c;">0</text>
+
+    <rect x="70" y="0" width="56" height="44" class="seq-box" style="fill:#fff3e0; stroke:#e65100;" />
+    <text x="98" y="22" class="seq-num" style="fill:#bf360c;">1</text>
+
+    <rect x="140" y="0" width="56" height="44" class="seq-box" style="fill:#fff3e0; stroke:#e65100;" />
+    <text x="168" y="22" class="seq-num" style="fill:#bf360c;">1</text>
+
+    <rect x="210" y="0" width="56" height="44" class="seq-box" />
+    <text x="238" y="22" class="seq-num">2</text>
+
+    <rect x="280" y="0" width="56" height="44" class="seq-box" />
+    <text x="308" y="22" class="seq-num">4</text>
+
+    <rect x="350" y="0" width="56" height="44" class="seq-box" />
+    <text x="378" y="22" class="seq-num">7</text>
+
+    <!-- Initial Window Bracket under 0, 1, 1 -->
+    <polyline points="28,50 28,60 168,60 168,50" class="bracket" />
+    <text x="28" y="76" class="ptr-label">a</text>
+    <text x="98" y="76" class="ptr-label">b</text>
+    <text x="168" y="76" class="ptr-label">c</text>
+    <text x="238" y="76" class="ptr-label" style="fill:#2e7d32;">d</text>
+  </g>
+
+  <line x1="40" y1="180" x2="660" y2="180" stroke="#cfd8dc" stroke-width="1.5" />
+
+  <!-- Column Headers -->
+  <text x="90" y="212" class="col-hdr">a</text>
+  <text x="130" y="212" class="col-hdr">+</text>
+  <text x="170" y="212" class="col-hdr">b</text>
+  <text x="210" y="212" class="col-hdr">+</text>
+  <text x="250" y="212" class="col-hdr">c</text>
+  <text x="290" y="212" class="col-hdr">=</text>
+  <text x="330" y="212" class="col-hdr" style="fill:#2e7d32;">d</text>
+  <line x1="65" y1="224" x2="355" y2="224" stroke="#90a4ae" stroke-width="1.5" />
+
+  <!-- Row 1: 0 + 1 + 1 = 2 -->
+  <text x="90" y="255" class="eq-text">0</text>
+  <text x="130" y="255" class="eq-text">+</text>
+  <text x="170" y="255" class="eq-text">1</text>
+  <text x="210" y="255" class="eq-text">+</text>
+  <text x="250" y="255" class="eq-text">1</text>
+  <text x="290" y="255" class="eq-text">=</text>
+  <text x="330" y="255" class="eq-text" style="fill:#2e7d32;">2</text>
+  <text x="380" y="255" class="step-note">Step 1: Seed (a=0, b=1, c=1) → d=2</text>
+
+  <!-- Diagonal Shift Arrows (Row 1 -> Row 2) -->
+  <line x1="162" y1="272" x2="100" y2="328" class="shift-arrow" marker-end="url(#arrowhead)" />
+  <line x1="242" y1="272" x2="180" y2="328" class="shift-arrow" marker-end="url(#arrowhead)" />
+  <line x1="322" y1="272" x2="260" y2="328" class="shift-arrow" marker-end="url(#arrowhead)" />
+
+  <!-- Row 2: 1 + 1 + 2 = 4 -->
+  <text x="90" y="350" class="eq-text">1</text>
+  <text x="130" y="350" class="eq-text">+</text>
+  <text x="170" y="350" class="eq-text">1</text>
+  <text x="210" y="350" class="eq-text">+</text>
+  <text x="250" y="350" class="eq-text">2</text>
+  <text x="290" y="350" class="eq-text">=</text>
+  <text x="330" y="350" class="eq-text" style="fill:#2e7d32;">4</text>
+  <text x="380" y="350" class="step-note">Step 2: Shift (a=b, b=c, c=d) → d=4</text>
+
+  <!-- Diagonal Shift Arrows (Row 2 -> Row 3) -->
+  <line x1="162" y1="367" x2="100" y2="423" class="shift-arrow" marker-end="url(#arrowhead)" />
+  <line x1="242" y1="367" x2="180" y2="423" class="shift-arrow" marker-end="url(#arrowhead)" />
+  <line x1="322" y1="367" x2="260" y2="423" class="shift-arrow" marker-end="url(#arrowhead)" />
+
+  <!-- Row 3: 1 + 2 + 4 = 7 -->
+  <text x="90" y="445" class="eq-text">1</text>
+  <text x="130" y="445" class="eq-text">+</text>
+  <text x="170" y="445" class="eq-text">2</text>
+  <text x="210" y="445" class="eq-text">+</text>
+  <text x="250" y="445" class="eq-text">4</text>
+  <text x="290" y="445" class="eq-text">=</text>
+  <text x="330" y="445" class="eq-text" style="fill:#2e7d32;">7</text>
+  <text x="380" y="445" class="step-note">Step 3: Shift (a=b, b=c, c=d) → d=7</text>
+
+  <!-- Legend Footer -->
+  <rect x="75" y="485" width="550" height="30" rx="6" fill="#fff3e0" stroke="#ffb74d" stroke-width="1" />
+  <text x="350" y="500" style="font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #e65100; text-anchor: middle; dominant-baseline: central;">
+    Orange Diagonal Arrows:  a = b  (b → a)   |   b = c  (c → b)   |   c = d  (d → c)
+  </text>
+</svg>

@@ -61,6 +61,12 @@ The SVGs contain dot counts matching the fifth term of each sequence: 15 triangu
 | sequences/polygon_numbers/images/hexagonal_numbers.svg | Hexagonal |
 | sequences/polygon_numbers/images/heptagonal_numbers.svg | Heptagonal |
 
+## Sequence diagrams
+
+| Image | Sequence |
+|---|---|
+| sequences/fibonacci_sequence.svg | Fibonacci sequence and variable shift |
+| sequences/tribonacci_sequence.svg | Tribonacci sequence and variable shift |
 ## Run a simulation
 
 From the repository root, compile and run the combined polygon-number example with Icarus Verilog:
