@@ -10,6 +10,7 @@ A collection of standalone behavioral Verilog examples for mathematical sequence
 - sequences/polygon_numbers/ — polygon-number Verilog modules and their SVG diagrams.
 - number_checks/ — perfect-square and perfect-cube checks.
 - factorials/ — factorial and superfactorial examples.
+- number_theory/ — number-theoretic algorithms and diagrams.
 
 ## Programs
 
@@ -67,6 +68,13 @@ The SVGs contain dot counts matching the fifth term of each sequence: 15 triangu
 |---|---|
 | sequences/fibonacci_sequence.svg | Fibonacci sequence and variable shift |
 | sequences/tribonacci_sequence.svg | Tribonacci sequence and variable shift |
+
+## Number-theory diagrams
+
+| Image | Algorithm |
+|---|---|
+| number_theory/lcm_incremental_step_search.svg | Incremental LCM step search for inputs 3 and 7 |
+
 ## Run a simulation
 
 From the repository root, compile and run the combined polygon-number example with Icarus Verilog:
