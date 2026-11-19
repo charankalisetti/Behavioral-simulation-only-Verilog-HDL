@@ -79,4 +79,43 @@ endmodule
      the loop and assign `seq[i]` once after the loop finishes.
 
 ===================================================================================================================
+
+
+
+
+// ============================================================================
+// Module Name: recaman_sequence
+// Description: Generates the Recamán sequence by setting the backward step as
+//              the default before scanning history, then overriding with the
+//              forward step only if a duplicate is found.
+// ============================================================================
+
+module recaman_sequence;
+
+    integer seq [19:0];
+
+    initial begin : block
+        integer i, j;
+        seq[0] = 0;
+        $display("%0d", seq[0]);            // Prints: 0
+
+        for (i = 1; i <= 5; i = i + 1) begin
+            if ((seq[i - 1] - i) >= 0) begin
+                // 1. Assume subtraction is valid FIRST (prevents 'x' when no match is found)
+                seq[i] = seq[i - 1] - i;
+
+                // 2. Scan history; override with addition ONLY if a duplicate exists
+                for (j = 0; j < i; j = j + 1) begin
+                    if (seq[j] == (seq[i - 1] - i))
+                        seq[i] = seq[i - 1] + i;
+                end
+            end else begin
+                seq[i] = seq[i - 1] + i;
+            end
+
+            $display("%0d", seq[i]);
+        end
+    end
+
+endmodule
 */
