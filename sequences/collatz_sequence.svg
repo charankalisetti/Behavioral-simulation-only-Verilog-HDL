@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 760" width="650" height="760">
+  <style>
+    .paper { fill: #fdfcf7; stroke: #d7ccc8; stroke-width: 2; }
+    .margin-line { stroke: #ef9a9a; stroke-width: 1.5; }
+    .rule-line { stroke: #e3f2fd; stroke-width: 1.2; }
+    .hand-title { font-family: 'Comic Sans MS', 'Segoe Print', 'Chalkboard SE', cursive; font-size: 24px; font-weight: bold; fill: #1a237e; }
+    .hand-text { font-family: 'Comic Sans MS', 'Segoe Print', 'Chalkboard SE', cursive; font-size: 20px; fill: #1e293b; }
+    .hand-code { font-family: 'Courier New', Courier, monospace; font-size: 20px; font-weight: bold; fill: #0d47a1; }
+    .highlight-box { fill: #fff8e1; stroke: #ffb300; stroke-width: 1.5; rx: 6; }
+  </style>
+
+  <!-- Notebook Page Background -->
+  <rect x="10" y="10" width="630" height="740" rx="12" class="paper" />
+
+  <!-- Subtle Horizontal Notebook Lines -->
+  <g>
+    <line x1="20" y1="85" x2="630" y2="85" class="rule-line" />
+    <line x1="20" y1="130" x2="630" y2="130" class="rule-line" />
+    <line x1="20" y1="175" x2="630" y2="175" class="rule-line" />
+    <line x1="20" y1="220" x2="630" y2="220" class="rule-line" />
+    <line x1="20" y1="265" x2="630" y2="265" class="rule-line" />
+    <line x1="20" y1="310" x2="630" y2="310" class="rule-line" />
+    <line x1="20" y1="355" x2="630" y2="355" class="rule-line" />
+    <line x1="20" y1="400" x2="630" y2="400" class="rule-line" />
+    <line x1="20" y1="445" x2="630" y2="445" class="rule-line" />
+    <line x1="20" y1="490" x2="630" y2="490" class="rule-line" />
+    <line x1="20" y1="535" x2="630" y2="535" class="rule-line" />
+    <line x1="20" y1="580" x2="630" y2="580" class="rule-line" />
+    <line x1="20" y1="625" x2="630" y2="625" class="rule-line" />
+    <line x1="20" y1="670" x2="630" y2="670" class="rule-line" />
+  </g>
+
+  <!-- Vertical Red Margin Line -->
+  <line x1="75" y1="20" x2="75" y2="740" class="margin-line" />
+
+  <!-- Title -->
+  <text x="95" y="75" class="hand-title">Collatz Sequence   (3n + 1)</text>
+  <line x1="95" y1="82" x2="430" y2="82" stroke="#1a237e" stroke-width="1.8" />
+
+  <!-- Line 2: Start condition -->
+  <text x="125" y="122" class="hand-text">Start from any positive</text>
+  <text x="380" y="152" class="hand-text">integer n</text>
+
+  <!-- Line 3: Two condition -->
+  <text x="95" y="170" class="hand-text">Two condition</text>
+
+  <!-- Line 4 &amp; 5: Even branch -->
+  <text x="105" y="215" class="hand-text">If  the  n  is  even</text>
+  <text x="145" y="260" class="hand-code">n = n / 2</text>
+
+  <!-- Line 6 &amp; 7: Odd branch (clean Else, no strikethrough) -->
+  <text x="95" y="305" class="hand-text">Else  the  n  is  odd</text>
+  <text x="145" y="350" class="hand-code">n = (3n + 1)</text>
+
+  <!-- Line 8: Loop condition ('until' removed) -->
+  <text x="95" y="395" class="hand-text">repeat</text>
+  <text x="175" y="395" class="hand-code">while (n != 1)</text>
+
+  <!-- Line 9 &amp; 10: 'every time' (clean, no strikethrough) -->
+  <text x="115" y="440" class="hand-text">every  time</text>
+  <text x="155" y="485" class="hand-code">display (n);</text>
+
+  <!-- Clean Summary Callout Box at Bottom of Page -->
+  <rect x="95" y="545" width="510" height="165" class="highlight-box" />
+  <text x="115" y="575" style="font-family: Arial, sans-serif; font-size: 15px; font-weight: bold; fill: #e65100;">
+    Clean Verilog Translation:
+  </text>
+  <text x="115" y="605" style="font-family: &#39;Courier New&#39;, monospace; font-size: 15px; font-weight: bold; fill: #1e293b;">
+    $display("%0d", n);
+  </text>
+  <text x="115" y="630" style="font-family: &#39;Courier New&#39;, monospace; font-size: 15px; font-weight: bold; fill: #1e293b;">
+    while (n != 1) begin
+  </text>
+  <text x="135" y="655" style="font-family: &#39;Courier New&#39;, monospace; font-size: 15px; font-weight: bold; fill: #1e293b;">
+    if (n % 2 == 0) n = n / 2;
+  </text>
+  <text x="135" y="680" style="font-family: &#39;Courier New&#39;, monospace; font-size: 15px; font-weight: bold; fill: #1e293b;">
+    else            n = (3 * n) + 1;
+  </text>
+  <text x="135" y="702" style="font-family: &#39;Courier New&#39;, monospace; font-size: 15px; font-weight: bold; fill: #1e293b;">
+    $display("%0d", n);
+  </text>
+</svg>

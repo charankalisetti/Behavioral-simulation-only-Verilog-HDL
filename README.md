@@ -66,6 +66,8 @@ The SVGs contain dot counts matching the fifth term of each sequence: 15 triangu
 
 | Image | Sequence |
 |---|---|
+| sequences/collatz_sequence.svg | Collatz flowchart (SVG) |
+| sequences/collatz_sequence.png | Collatz flowchart (PNG) |
 | sequences/fibonacci_sequence.svg | Fibonacci sequence and variable shift |
 | sequences/lucas_sequence.svg | Lucas sequence and variable shift |
 | sequences/tribonacci_sequence.svg | Tribonacci sequence and variable shift |
