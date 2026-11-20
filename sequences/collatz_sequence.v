@@ -52,4 +52,6 @@ endmodule
        though it remains an unsolved mathematical conjecture for all numbers up to infinity.
 
 ===================================================================================================================
+
+First, a quick mathematical note: 0 is not a positive integer—positive integers start at 1 (1, 2, 3, ...), while 0 is a non-negative integer.
 */
