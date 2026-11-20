@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <style>
+    .title { font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: bold; fill: #1a237e; text-anchor: middle; }
+    .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; fill: #455a64; text-anchor: middle; }
+    .box-init { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2; rx: 8; }
+    .box-step { fill: #e3f2fd; stroke: #1565c0; stroke-width: 2; rx: 8; }
+    .box-term { fill: #fff3e0; stroke: #e65100; stroke-width: 2; rx: 8; }
+    .box-title { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; fill: #1e293b; text-anchor: middle; }
+    .code-text { font-family: 'Courier New', Courier, monospace; font-size: 14px; font-weight: bold; fill: #0d47a1; text-anchor: middle; }
+    .num-text { font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; fill: #bf360c; text-anchor: middle; dominant-baseline: central; }
+    .iter-label { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; fill: #37474f; text-anchor: middle; }
+    .diff-label { font-family: 'Courier New', Courier, monospace; font-size: 14px; font-weight: bold; fill: #2e7d32; text-anchor: middle; }
+    .arrow-main { stroke: #37474f; stroke-width: 2.5; fill: none; }
+    .arrow-arc { stroke: #2e7d32; stroke-width: 2.5; fill: none; }
+    .arrow-loop { stroke: #e65100; stroke-width: 2.2; stroke-dasharray: 5,4; fill: none; }
+  </style>
+
+  <defs>
+    <marker id="arr-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#37474f" />
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2e7d32" />
+    </marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e65100" />
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="410" y="36" class="title">Arithmetic Progression (AP) Series Generator</text>
+  <text x="410" y="60" class="subtitle">start_num = 7  |  common_diff = 3  |  no_of_term = 5  |  Rule: term = term + common_diff</text>
+
+  <!-- Top Section: Initialization &amp; Loop Architecture -->
+  <g transform="translate(55, 85)">
+    <!-- Box 1: Initial Values -->
+    <rect x="0" y="0" width="210" height="92" class="box-init" />
+    <text x="105" y="24" class="box-title" style="fill:#1b5e20;">1. Initial Values</text>
+    <text x="105" y="46" class="code-text" style="fill:#1b5e20;">start_num   = 7</text>
+    <text x="105" y="64" class="code-text" style="fill:#1b5e20;">common_diff = 3</text>
+    <text x="105" y="82" class="code-text" style="fill:#1b5e20;">no_of_term  = 5</text>
+
+    <!-- Arrow 1 -> 2 -->
+    <line x1="210" y1="46" x2="255" y2="46" class="arrow-main" marker-end="url(#arr-dark)" />
+
+    <!-- Box 2: Setup -->
+    <rect x="260" y="14" width="180" height="64" class="box-step" />
+    <text x="350" y="38" class="box-title">2. Seed Setup</text>
+    <text x="350" y="60" class="code-text">term = start_num</text>
+
+    <!-- Arrow 2 -> 3 -->
+    <line x1="440" y1="46" x2="485" y2="46" class="arrow-main" marker-end="url(#arr-dark)" />
+
+    <!-- Box 3: Repeat Loop -->
+    <rect x="490" y="0" width="220" height="92" class="box-term" />
+    <text x="600" y="24" class="box-title" style="fill:#bf360c;">3. Loop (i = 1 to 5)</text>
+    <text x="600" y="47" class="code-text" style="fill:#bf360c;">$display(term);</text>
+    <text x="600" y="69" class="code-text" style="fill:#bf360c;">term = term + 3;</text>
+
+    <!-- Self-loop feedback arrow on Box 3 -->
+    <path d="M 660 92 C 660 122, 540 122, 540 96" class="arrow-loop" marker-end="url(#arr-orange)" />
+    <text x="600" y="132" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #e65100; text-anchor: middle;">
+      Repeat while (i &lt;= 5)
+    </text>
+  </g>
+
+  <line x1="40" y1="240" x2="780" y2="240" stroke="#cfd8dc" stroke-width="1.5" />
+
+  <!-- Bottom Section: Visual Progression of the 5 Generated Terms -->
+  <text x="410" y="272" style="font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1a237e; text-anchor: middle;">
+    Step-by-Step AP Progression (5 Terms Output)
+  </text>
+
+  <!-- Curved +3 Step Arcs Above Boxes -->
+  <g transform="translate(85, 345)">
+    <!-- Arc 1: 7 -> 10 -->
+    <path d="M 45 0 Q 112 -48 180 0" class="arrow-arc" marker-end="url(#arr-green)" />
+    <text x="112" y="-34" class="diff-label">+3</text>
+
+    <!-- Arc 2: 10 -> 13 -->
+    <path d="M 185 0 Q 252 -48 320 0" class="arrow-arc" marker-end="url(#arr-green)" />
+    <text x="252" y="-34" class="diff-label">+3</text>
+
+    <!-- Arc 3: 13 -> 16 -->
+    <path d="M 325 0 Q 392 -48 460 0" class="arrow-arc" marker-end="url(#arr-green)" />
+    <text x="392" y="-34" class="diff-label">+3</text>
+
+    <!-- Arc 4: 16 -> 19 -->
+    <path d="M 465 0 Q 532 -48 600 0" class="arrow-arc" marker-end="url(#arr-green)" />
+    <text x="532" y="-34" class="diff-label">+3</text>
+
+    <!-- Term 1: 7 -->
+    <rect x="0" y="6" width="90" height="60" class="box-term" style="fill:#ffe0b2;" />
+    <text x="45" y="36" class="num-text">7</text>
+    <text x="45" y="86" class="iter-label">Term 1 (i=1)</text>
+    <text x="45" y="103" style="font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; text-anchor: middle;">start_num</text>
+
+    <!-- Term 2: 10 -->
+    <rect x="140" y="6" width="90" height="60" class="box-term" />
+    <text x="185" y="36" class="num-text">10</text>
+    <text x="185" y="86" class="iter-label">Term 2 (i=2)</text>
+    <text x="185" y="103" style="font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; text-anchor: middle;">7 + 3</text>
+
+    <!-- Term 3: 13 -->
+    <rect x="280" y="6" width="90" height="60" class="box-term" />
+    <text x="325" y="36" class="num-text">13</text>
+    <text x="325" y="86" class="iter-label">Term 3 (i=3)</text>
+    <text x="325" y="103" style="font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; text-anchor: middle;">10 + 3</text>
+
+    <!-- Term 4: 16 -->
+    <rect x="420" y="6" width="90" height="60" class="box-term" />
+    <text x="465" y="36" class="num-text">16</text>
+    <text x="465" y="86" class="iter-label">Term 4 (i=4)</text>
+    <text x="465" y="103" style="font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; text-anchor: middle;">13 + 3</text>
+
+    <!-- Term 5: 19 -->
+    <rect x="560" y="6" width="90" height="60" class="box-term" />
+    <text x="605" y="36" class="num-text">19</text>
+    <text x="605" y="86" class="iter-label">Term 5 (i=5)</text>
+    <text x="605" y="103" style="font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; text-anchor: middle;">16 + 3</text>
+  </g>
+
+  <!-- Footer Banner -->
+  <rect x="130" y="495" width="560" height="36" rx="8" fill="#e8f5e9" stroke="#81c784" stroke-width="1.5" />
+  <text x="410" y="513" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1b5e20; text-anchor: middle; dominant-baseline: central;">
+    Console Output:  7,  10,  13,  16,  19   (Print current term first, then add common_diff = 3)
+  </text>
+</svg>
